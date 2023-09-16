@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import { ShortenLinks } from './js/components/short_api';
@@ -10,8 +9,12 @@ function App() {
 
   return (
     <>
-      <LinkBar setInput={setInput}/>
-      <ShortenLinks input={input} />
+    <div className="wrapper">
+      <div className="app-container">
+        <LinkBar setInput={setInput}/>
+        <ShortenLinks input={input} />
+      </div>
+    </div>
     </>
   );
 }

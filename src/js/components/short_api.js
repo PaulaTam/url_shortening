@@ -1,25 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
 import { ResultBar } from './linkbar';
 
-/* //in progress copy function
-function copyToClipboard(copyLink) {
-    navigator.clipboard.writeText(copyLink);
-}*/
-
 export const ShortenLinks = ({ input }) => {
-    const [shortLink, setShortLink] = useState(""); //shortened link
     const [linkList, setLinkList] = useState([]); //local storage data, current links
-    //const [copy, setCopy] = useState(false); //for clipboard copy
     const [error, setError] = useState(""); //error message
 
     const fetch = async() => {
         try {
             const response = await axios(`https://api.shrtco.de/v2/shorten?url=${input}`);
+            const originalLink = response.data.result.original_link;
             const shortenedLink = response.data.result.full_short_link;
-            setShortLink(shortenedLink);
-            setLinkList((prev) => [...prev, shortenedLink]);
+
+            let newLink = {
+                index: linkList.length,
+                originalLink: originalLink,
+                shortenedLink: shortenedLink
+            };
+            
+            setLinkList((prev) => [...prev, newLink]);
         } catch {
             setError(error);
         }
@@ -32,13 +31,14 @@ export const ShortenLinks = ({ input }) => {
     }, [input]);
 
     return (
-        <>
-            <ResultBar value={shortLink} />
-            {linkList.length > 0 ? linkList.reverse().map((data) => {
+        <>        
+            {linkList.length > 0 ? linkList.map((data) => {
             return(
-                <li>{data}</li>
+                <ResultBar index={data.index}
+                originalLink={data.originalLink}
+                shortenedLink={data.shortenedLink} />
             )
-        }) : null}
+            }) : null}
         </>
     )
 }

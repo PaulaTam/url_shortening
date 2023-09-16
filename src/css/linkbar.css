@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    width: auto;
+    gap: 2px;
+}
+
+.submit-btn,
+.copy-btn,
+.input-field {
+    padding: .65em .5em;
+    border: none;
+    border-radius: .3em;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.input-field {
+    width: 50vh;
+}
+
+.submit-btn,
+.copy-btn {
+    background-color: cyan;
+    color: white;
+}
