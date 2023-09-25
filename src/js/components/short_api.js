@@ -28,6 +28,8 @@ export const ShortenLinks = ({ input }) => {
         if (input.length) {
             fetch();
         }
+        
+        // eslint-disable-next-line
     }, [input]);
 
     return (

@@ -6,6 +6,7 @@
 
 .wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -14,12 +15,15 @@
    #031b88, #6096fd, #aab6fb, #fb7bbe, #faa7b8);
   background-size: 300% 300%;
   animation: gradient 15s ease infinite;
+  row-gap: 1em;
 }
 
 .app-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  gap: 1em;
   width: 80%;
+  background-color: rgb(39, 65, 179);
+  padding: 2em;
+  border-radius: 1em;
 }

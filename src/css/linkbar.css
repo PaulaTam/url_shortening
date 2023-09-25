@@ -1,27 +1,61 @@
 .container {
     display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    width: auto;
-    gap: 2px;
+    width: 100%;
+    justify-content: center;
 }
 
 .submit-btn,
 .copy-btn,
-.input-field {
-    padding: .65em .5em;
+.input-field,
+.short-url-list {
+    padding: .5em .5em;
     border: none;
     border-radius: .3em;
     font-size: medium;
     font-weight: 500;
 }
 
+.link-input {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    width: 100%;
+}
+
 .input-field {
-    width: 50vh;
+    flex: 2;
+}
+
+.short-url-list {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    column-gap: 10px;
+    width: 100%;
+}
+
+.link-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.og-link {
+    float: left;
+    color: aqua;
+}
+
+.short-link {
+    float: right;
 }
 
 .submit-btn,
 .copy-btn {
     background-color: cyan;
     color: white;
+    font-weight: bold;
+}
+
+.copy-btn {
+    margin-left: auto;
 }

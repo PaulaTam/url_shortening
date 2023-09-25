@@ -14,10 +14,12 @@ export const LinkBar = ({ setInput }) => {
 
     return (
         <div className="container">
-            <input placeholder="Enter a link to shorten here!"
-                value={value} onChange={(e) => setValue(e.target.value)}
-                type="text" className="input-field"/>
-            <button className="submit-btn" onClick={handleSubmit}>Shorten It!</button>
+            <div className="link-input">
+                <input placeholder="Enter a link to shorten here!"
+                    value={value} onChange={(e) => setValue(e.target.value)}
+                    type="text" className="input-field"/>
+                <button className="submit-btn" onClick={handleSubmit}>Shorten It!</button>
+            </div>
         </div>
     )
 }
@@ -37,13 +39,15 @@ export const ResultBar = (data) => {
 
     return (
         <div className="container">
-            <CopyToClipboard text={data.shortenedLink}
-                onCopy={() => setCopy(true)}>
-                <button className="copy-btn" style={{ float: "right" }}>{copy ? "Copied" : "Copy"}</button>
-            </CopyToClipboard>
-            <div class="short_url_list" key={data.index} >
-                <span style={{ float: "left" }}>{data.originalLink}</span>
-                <span style={{ float: "right" }}>{data.shortenedLink}</span>
+            <div className="short-url-list" key={data.index} >
+                <div className="link-container" key={data.index}>
+                    <p className="og-link">{data.originalLink}</p>
+                    <p className="short-link">{data.shortenedLink}</p>
+                </div>
+                <CopyToClipboard text={data.shortenedLink}
+                    onCopy={() => setCopy(true)}>
+                    <button className="copy-btn">{copy ? "Copied" : "Copy"}</button>
+                </CopyToClipboard>
             </div>
         </div>
     )
