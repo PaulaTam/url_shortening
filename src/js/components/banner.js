@@ -2,7 +2,6 @@ import React from 'react';
 import '../../css/banner.css';
 
 export const Banner = () => {
-
     return (
         <div className="intro" id="slide">
             <h1>URL Shortener</h1>
