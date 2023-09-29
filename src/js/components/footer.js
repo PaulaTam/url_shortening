@@ -17,15 +17,15 @@ export const Footer = () => {
                         <h4>Contact Me</h4>
                         <ul className='list-unstyled'>
                             <li className="footer-icon">
-                                <SocialIcon network="email" href="mailto:abigailttam65@gmail.com"
+                                <SocialIcon network="email" href="mailto:abigailttam65@gmail.com" target="_blank"
                                 style={{ height: 40, width: 40 }} bgColor="white" fgColor="black"/> Email
                             </li>
                             <li className="footer-icon">
-                                <SocialIcon url="https://www.linkedin.com/in/paulatam"
+                                <SocialIcon url="https://www.linkedin.com/in/paulatam" target="_blank"
                                 style={{ height: 40, width: 40 }} bgColor="white" fgColor="black"/> LinkedIn
                             </li>
                             <li className="footer-icon">
-                                <SocialIcon url="https://github.com/PaulaTam"
+                                <SocialIcon url="https://github.com/PaulaTam" target="_blank"
                                 style={{ height: 40, width: 40 }} bgColor="white" fgColor="black"/> Github
                             </li>
                         </ul>
