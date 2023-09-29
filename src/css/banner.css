@@ -1,0 +1,18 @@
+h1 {
+    font-size: 3rem;
+}
+
+#slide {
+    width: 80%;
+    height: 20vh;
+    background-color: aliceblue;
+    margin-bottom: 30px;
+    border-radius: 1em;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
