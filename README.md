@@ -2,7 +2,6 @@
 - [Overview](#overview)
   - [Purpose](#purpose)
   - [Features](#features)
-  - [Screenshots](#screenshots)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [npm packages used](#npm-packages-used)
@@ -19,9 +18,6 @@ The purpose of this project is to allow the user to shorten any valid URL.
 - Copy a shorten link to clipboard using a button
 - Retain a list of shortened links
 - ... TBD ...
- 
-### Screenshots
---- N/A ---
 
 ## My process
 
@@ -32,7 +28,7 @@ The purpose of this project is to allow the user to shorten any valid URL.
 - React.js
 - Node.js
 - ~~[shrtcode API](https://shrtco.de/docs)~~ Unfortunately, the shrtcode API is no longer accessible.
-- [replacement API inserted here soon]
+- [TinyUrl API](https://tinyurl.com/app/dev)
 
 ### npm packages used
 - [react-bootstrap](https://www.npmjs.com/package/react-bootstrap)
@@ -42,7 +38,9 @@ The purpose of this project is to allow the user to shorten any valid URL.
 
 ### Continued development
 - 01/20/2024
-Found out that shrtcode API was no longer supported as the documentation is inaccessible.
+  Found out that shrtcode API was no longer supported as the documentation is inaccessible.
+- 01/21/2024
+  Replaced shrtcode API with TinyUrl API.
 
 
 ## Author
