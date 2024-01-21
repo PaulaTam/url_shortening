@@ -11,7 +11,7 @@
 ## Overview
 
 ### Purpose
-The purpose of this project is to allow the user to shorten any valid URL.
+The purpose of this project is to allow the user to shorten any valid URL. Currently utilizes TinyUrl API to allow users to shorten their long links with just a click!
 
 ### Features
 - Shorten any valid URLs
