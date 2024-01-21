@@ -31,7 +31,8 @@ The purpose of this project is to allow the user to shorten any valid URL.
 - Javacript
 - React.js
 - Node.js
-- [shrtcode API](https://shrtco.de/docs)
+- ~~[shrtcode API](https://shrtco.de/docs)~~ Unfortunately, the shrtcode API is no longer accessible.
+- [replacement API inserted here soon]
 
 ### npm packages used
 - [react-bootstrap](https://www.npmjs.com/package/react-bootstrap)
@@ -40,7 +41,9 @@ The purpose of this project is to allow the user to shorten any valid URL.
 - [react-github-corner](https://www.npmjs.com/package/react-github-corner)
 
 ### Continued development
---- TBD ---
+- 01/20/2024
+Found out that shrtcode API was no longer supported as the documentation is inaccessible.
+
 
 ## Author
 @PaulaTam
