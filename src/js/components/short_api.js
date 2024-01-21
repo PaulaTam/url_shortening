@@ -8,9 +8,11 @@ export const ShortenLinks = ({ input }) => {
 
     const fetch = async() => {
         try {
-            const response = await axios(`https://api.shrtco.de/v2/shorten?url=${input}`);
-            const originalLink = response.data.result.original_link;
-            const shortenedLink = response.data.result.full_short_link;
+            const response = await axios(`https://tinyurl.com/api-create.php?url=${input}`);
+            const originalLink = input;
+            const shortenedLink = response.data;
+
+            console.log(response);
 
             let newLink = {
                 index: linkList.length,
